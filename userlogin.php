@@ -29,7 +29,7 @@
 					
 					<content>
 						<p>		  
-          <form name="s" action="https://cse3501project.herokuapp.com/check_login_user.php" method="POST" onsubmit="return valid()">
+          <form name="s" action="check_login_user.php" method="POST" onsubmit="return valid()">
             <table align="center" cellpadding="" cellspacing="" width="">
               <tr> 
                 <td colspan="2" align="center"><font size="2"><b>
