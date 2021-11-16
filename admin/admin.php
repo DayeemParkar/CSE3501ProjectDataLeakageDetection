@@ -16,7 +16,7 @@ if (!isset($_SESSION['name'])) {
 		//$_SESSION['error'] = "Please Login First";
 		echo "<script type=\"text/javascript\">"." alert('Please Login'); " ."</script>";
 		} if (!$_SESSION['name']){
-		      echo  header("Location: https://cse3501project.herokuapp.com/admin/adminlogin.php");
+		      echo  header("Location: https://cse3501project.herokuapp.com/adminlogin.php");
 		}
 
 		
