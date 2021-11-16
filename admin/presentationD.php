@@ -10,12 +10,12 @@
                         <?php
                             {
                                 $row="";
-                                $con = mysqli_connect("localhost","root","");
+                                $con = mysqli_connect("sql5.freemysqlhosting.net","sql5451502","6NrWzphBie");
                                 if (!$con)
                                     echo('Could not connect: ' . mysqli_error());
                                 else
                                 {
-                                    mysqli_select_db($con,"dataleakage");
+                                    mysqli_select_db($con,"sql5451502");
                                     $sql = 'SELECT subject, topic, fname FROM presentation';
                                     $retval = mysqli_query(  $con,$sql );
                                     if(! $retval )
@@ -26,7 +26,7 @@
                                     {
                                            echo "SUBJECT: {$row['subject']} <br> " .
                                                 "NOTICE: {$row['topic']} <br> " .
-                                                "DOWNLOAD FILE: <a href='download.php?id=". "{$row['fname']}'>{$row['fname']}</a>" .
+                                                "DOWNLOAD FILE: <a href='https://cse3501project.herokuapp.com/admin/download.php?id=". "{$row['fname']}'>{$row['fname']}</a>" .
 											    "<hr><br>" ;
                                     } 
                                 }
