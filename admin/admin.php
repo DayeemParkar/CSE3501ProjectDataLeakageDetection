@@ -4,7 +4,7 @@
 	<title>Data Leakage Detection</title>
 	<meta charset="utf-8" />
 	
-	<link rel="stylesheet" href="https://cse3501project.herokuapp.com/stylesheet.css" type="text/css" />
+	<link rel="stylesheet" href="https://cse3501project.herokuapp.com/admin/stylesheet.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -16,7 +16,7 @@ if (!isset($_SESSION['name'])) {
 		//$_SESSION['error'] = "Please Login First";
 		echo "<script type=\"text/javascript\">"." alert('Please Login'); " ."</script>";
 		} if (!$_SESSION['name']){
-		      echo  header("Location: https://cse3501project.herokuapp.com/adminlogin.php");
+		      echo  header("Location: https://cse3501project.herokuapp.com/admin/adminlogin.php");
 		}
 
 		
@@ -36,11 +36,11 @@ header( 'Content-Type: text/html; charset=utf-8' );
 	
 	<header class="mainHeader">
 		<nav><ul>
-			<li class="active"><a href="https://cse3501project.herokuapp.com/admin.php">Home</a></li>
-			<li><a href="https://cse3501project.herokuapp.com/upload.php">Upload Article</a></li>
-			<li><a href="https://cse3501project.herokuapp.com/view file.php">View File</a></li>
-			<li ><a href="https://cse3501project.herokuapp.com/leakfile.php">Leak User</a></li>
-			<li ><a href="https://cse3501project.herokuapp.com/sendkey.php">SendKey</a></li>
+			<li class="active"><a href="https://cse3501project.herokuapp.com/admin/admin.php">Home</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/admin/upload.php">Upload Article</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/admin/viewfile.php">View File</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/admin/leakfile.php">Leak User</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/admin/sendkey.php">SendKey</a></li>
 			
 		</ul></nav>
 	</header>
@@ -56,15 +56,15 @@ header( 'Content-Type: text/html; charset=utf-8' );
 						<p>
 							<table align="center" cellpadding="10" cellspacing="2" width="10">
 								<tr>
-									<td ><img src="img/1.png" height='60px' width='60px'></td>
-									<td><img src="img/msg.jpg"  height='60px' width='60px'></td>
-									<td><img src="img/upload.png"  height='60px' width='60px'></td>
-									<td><img src="img/user.jpg"  height='60px' width='60px'></td></tr>
+									<td ><img src="https://cse3501project.herokuapp.com/admin/img/1.png" height='60px' width='60px'></td>
+									<td><img src="https://cse3501project.herokuapp.com/admin/img/msg.jpg"  height='60px' width='60px'></td>
+									<td><img src="https://cse3501project.herokuapp.com/admin/img/upload.png"  height='60px' width='60px'></td>
+									<td><img src="https://cse3501project.herokuapp.com/admin/img/user.jpg"  height='60px' width='60px'></td></tr>
 								<tr>
-									<td><a href="m_arti.php">Manage Articles</a></td>
-									<td><a href="sendmsg.php">Send Message</a></td>
-									<td><a href="upload.php">Upload Articles</a></td>
-									<td><a href="m_user.php">Manage User</a></td>
+									<td><a href="https://cse3501project.herokuapp.com/admin/m_arti.php">Manage Articles</a></td>
+									<td><a href="https://cse3501project.herokuapp.com/admin/sendmsg.php">Send Message</a></td>
+									<td><a href="https://cse3501project.herokuapp.com/admin/upload.php">Upload Articles</a></td>
+									<td><a href="https://cse3501project.herokuapp.com/admin/m_user.php">Manage User</a></td>
 </tr>
 
 </table>
@@ -78,7 +78,7 @@ header( 'Content-Type: text/html; charset=utf-8' );
 <aside class="top-sidebar">
 					<article>
 					<h2>Welcome: <?php echo $_SESSION['name']/*Echo the username */ ?></h2>
-					<li><a href="https://cse3501project.herokuapp.com/logout.php">Logout</a></li>
+					<li><a href="https://cse3501project.herokuapp.com/admin/logout.php">Logout</a></li>
 					
 					<p></p>
 				    </article>
