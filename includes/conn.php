@@ -1,7 +1,5 @@
 <?php
 
-// Input your information for the database here
-
 // Host name
 $host = "sql5.freemysqlhosting.net";
 
