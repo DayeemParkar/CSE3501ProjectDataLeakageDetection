@@ -22,15 +22,15 @@ if(isset($username, $password)) {
         $_SESSION['password']= "password";
         session_start();
         $_SESSION['name']= $myusername;
-        header("location:admin/admin.php");
+        header("location:https://cse3501project.herokuapp.com/admin/admin.php");
     }
     else {
         $msg = "Wrong Username or Password. Please retry";
-        header("location:index.php?msg=$msg");
+        header("location:https://cse3501project.herokuapp.com?msg=$msg");
     }
     ob_end_flush();
 }
 else {
-    header("location:index.php?msg=Please enter some username and password");
+    header("location:https://cse3501project.herokuapp.com?msg=Please enter some username and password");
 }
 ?>
