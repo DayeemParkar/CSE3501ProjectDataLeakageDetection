@@ -1,11 +1,10 @@
 <?php
-define("DOC_ROOT", __DIR__.'/'); // To properly get the config.php file
 $username = $_POST['username']; //Set UserName
 $password = $_POST['password']; //Set Password
 $msg ='';
 if(isset($username, $password)) {
     ob_start();
-    include(DOC_ROOT.'/config.php'); //Initiate the MySQL connection
+    include('https://cse3501project.herokuapp.com/config.php'); //Initiate the MySQL connection
     // To protect MySQL injection (more detail about MySQL injection)
     $myusername = stripslashes($username);
     $mypassword = stripslashes($password);
