@@ -2,7 +2,7 @@
 // Start a session for error reporting
 session_start();
 // Call our connection file
-require("includes/conn.php");
+require("https://cse3501project.herokuapp.com/includes/conn.php");
 
 
 
@@ -23,7 +23,7 @@ $uid = mysqli_real_escape_string($conn, $uid);
 	$result = mysqli_query($conn, $sql) or die ("Could not insert data into DB: " . mysqli_error($conn));
 	$sql = "insert into leaker ( id, name, probability) values ('$uid', '$uname', 0.0)";
 	$result = mysqli_query($conn, $sql) or die ("Could not insert data into DB: " . mysqli_error($conn));
-	header("Location:userlogin.php");
+	header("Location:https://cse3501project.herokuapp.com/userlogin.php");
 	exit;
 
 ?>
