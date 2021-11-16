@@ -13,10 +13,10 @@
 	
 	<header class="mainHeader">
 		<nav><ul>
-			<li ><a href="index.php">Home</a></li>
-			<li><a href="register.html">Registration</a></li>
-			<li ><a href="userlogin.php">UserLogin</a></li>
-			<li class="active"><a href="adminlogin.php">AdminLogin</a></li>			
+			<li ><a href="https://cse3501project.herokuapp.com">Home</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/register.html">Registration</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/userlogin.php">UserLogin</a></li>
+			<li class="active"><a href="https://cse3501project.herokuapp.com/adminlogin.php">AdminLogin</a></li>			
 	</ul></nav>
 	</header>
 		
