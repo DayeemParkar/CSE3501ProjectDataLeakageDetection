@@ -1,5 +1,5 @@
 <?php
-	$file = './download/'.$_GET['id'];
+	$file = 'https://cse3501project.herokuapp.com/admin/download/'.$_GET['id'];
    	$title=$_GET['id'];
 
     header("Pragma: public");
