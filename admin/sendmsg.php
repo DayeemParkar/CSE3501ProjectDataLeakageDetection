@@ -6,7 +6,7 @@ if (!isset($_SESSION['name'])) {
 		//$_SESSION['error'] = "Please Login First";
 		echo "<script type=\"text/javascript\">"." alert('Please Login'); " ."</script>";
 		} if (!$_SESSION['name']){
-		      echo  header("Location: http://localhost/data lekage detaction/adminlogin.php");
+		      echo  header("Location: https://cse3501project.herokuapp.com/adminlogin.php");
 		}
 
 		
@@ -28,7 +28,7 @@ header( 'Content-Type: text/html; charset=utf-8' );
 	<title>Data Leakage Detection</title>
 	<meta charset="utf-8" />
 	
-	<link rel="stylesheet" href="stylesheet.css" type="text/css" />
+	<link rel="stylesheet" href="https://cse3501project.herokuapp.com/admin/stylesheet.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -38,11 +38,11 @@ header( 'Content-Type: text/html; charset=utf-8' );
 	<header class="mainHeader">
 		<nav><ul>
 			
-			<li class="active"><a href="admin.php">Home</a></li>
-			<li><a href="upload.php">Publish Article</a></li>
-			<li><a href="view file.php">View File</a></li>
-			<li ><a href="leakfile.php">LeakFile</a></li>
-			<li ><a href="sendkey.php">SendKey</a></li>
+			<li class="active"><a href="https://cse3501project.herokuapp.com/admin/admin.php">Home</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/admin/upload.php">Publish Article</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/admin/view file.php">View File</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/admin/leakfile.php">LeakFile</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/admin/sendkey.php">SendKey</a></li>
 	</ul></nav>
 	</header>
 		
@@ -55,7 +55,7 @@ header( 'Content-Type: text/html; charset=utf-8' );
 					
 					
 					<content>
-						<p>	  <form name="s" action="msg.php" method="POST" onsubmit="return valid()">
+						<p>	  <form name="s" action="https://cse3501project.herokuapp.com/admin/msg.php" method="POST" onsubmit="return valid()">
             <table align="center" cellpadding="" cellspacing="" width="">
               <tr> 
                 <td colspan="2" align="center"><font size="2"><b>
@@ -96,7 +96,7 @@ header( 'Content-Type: text/html; charset=utf-8' );
 <aside class="top-sidebar">
 					<article>
 					<h2>Welcome: <?php echo $_SESSION['name']/*Echo the username */ ?></h2>
-					<li><a href="logout.php">Logout</a></li>
+					<li><a href="https://cse3501project.herokuapp.com/admin/logout.php">Logout</a></li>
 					
 					<p></p>
 				    </article>
