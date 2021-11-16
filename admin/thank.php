@@ -4,7 +4,7 @@
 	<title>Data Leakage Detection</title>
 	<meta charset="utf-8" />
 	
-	<link rel="stylesheet" href="stylesheet.css" type="text/css" />
+	<link rel="stylesheet" href="https://cse3501project.herokuapp.com/admin/stylesheet.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -16,7 +16,7 @@ if (!isset($_SESSION['name'])) {
 		//$_SESSION['error'] = "Please Login First";
 		echo "<script type=\"text/javascript\">"." alert('Please Login'); " ."</script>";
 		} if (!$_SESSION['name']){
-		      echo  header("Location: http://localhost/data lekage detaction/adminlogin.php");
+		      echo  header("Location: https://cse3501project.herokuapp.com/adminlogin.php");
 		}
 
 		
@@ -37,10 +37,10 @@ header( 'Content-Type: text/html; charset=utf-8' );
 	<header class="mainHeader">
 		<img src="img/logo.gif">
 		<nav><ul>
-			<li class="active"><a href="index.html">Home</a></li>
-			<li><a href="upload.php">Publish Article</a></li>
-			<li><a href="view file.php">View File</a></li>
-			<li ><a href="leakfile.php">LeakFile</a></li>
+			<li class="active"><a href="https://cse3501project.herokuapp.com">Home</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/admin/upload.php">Publish Article</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/admin/view file.php">View File</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/admin/leakfile.php">LeakFile</a></li>
 			
 			
 			
