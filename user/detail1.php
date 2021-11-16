@@ -1,12 +1,12 @@
 <?php 
 session_start();
 
-$con = mysqli_connect("localhost","root","");
+$con = mysqli_connect("sql5.freemysqlhosting.net","sql5451502","6NrWzphBie");
 
 if (!$con)
     echo('Could not connect: ' . mysqli_error());
 else {
-    mysqli_select_db($con,"dataleakage" );
+    mysqli_select_db($con,"sql5451502" );
     $k1=$_POST['s1'];
     $k2=$_POST['s2'];
 
@@ -57,7 +57,7 @@ echo'enter success
 
 $sql = "insert into leaker ( name,time) values ('$_SESSION[name]','".date("d/m/Y")."')";
 	$result = mysqli_query($con,$sql) or die ("Could not insert data into DB: " . mysqli_error());
-	header("Location: askadmin.php");
+	header("Location: https://cse3501project.herokuapp.com/user/askadmin.php");
 	
 	
 }
