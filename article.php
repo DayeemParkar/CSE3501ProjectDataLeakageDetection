@@ -14,11 +14,11 @@
 	
 	<header class="mainHeader">
 		<nav><ul>
-						<li ><a href="index.php">Home</a></li>
-			<li><a href="register.html">Registration</a></li>
-			<li ><a href="userlogin.php">UserLogin</a></li>
-			<li ><a href="adminlogin.php">AdminLogin</a></li>
-			<li class="active"><a href="article.php">Articles</a></li>
+						<li ><a href="https://cse3501project.herokuapp.com">Home</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/register.html">Registration</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/userlogin.php">UserLogin</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/adminlogin.php">AdminLogin</a></li>
+			<li class="active"><a href="https://cse3501project.herokuapp.com/article.php">Articles</a></li>
 			
 		</ul></nav>
 	</header>
@@ -47,12 +47,12 @@
                         <?php
                             {
                                 $row="";
-                                $con = mysqli_connect("localhost","root","");
+                                $con = mysqli_connect("sql5.freemysqlhosting.net","sql5451502","6NrWzphBie");
                                 if (!$con)
                                     echo('Could not connect: ' . mysqli_error());
                                 else
                                 {
-                                    mysqli_select_db($con, "dataleakage");
+                                    mysqli_select_db($con, "sql5451502");
                                     $sql = 'SELECT * FROM presentation';
                                     $retval = mysqli_query($con, $sql);
                                     if(! $retval )
