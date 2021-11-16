@@ -4,7 +4,7 @@
 	<title>Data Leakage Detection</title>
 	<meta charset="utf-8" />
 	
-	<link rel="stylesheet" href="stylesheet.css" type="text/css" />
+	<link rel="stylesheet" href="https://cse3501project.herokuapp.com/admin/stylesheet.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -16,7 +16,7 @@ if (!isset($_SESSION['name'])) {
 		//$_SESSION['error'] = "Please Login First";
 		echo "<script type=\"text/javascript\">"." alert('Please Login'); " ."</script>";
 		} if (!$_SESSION['name']){
-		      echo  header("Location: http://localhost/data lekage detaction/adminlogin.php");
+		      echo  header("Location: https://cse3501project.herokuapp.com/admin/adminlogin.php");
 		}
 
 		
@@ -36,11 +36,11 @@ header( 'Content-Type: text/html; charset=utf-8' );
 	
 	<header class="mainHeader">
 		<nav><ul>
-			<li class="active"><a href="admin.php">Home</a></li>
-			<li><a href="upload.php">Upload Article</a></li>
-			<li ><a href="viewfile.php">View File</a></li>
-			<li ><a href="leakfile.php">Leak User</a></li>
-			<li ><a href="sendkey.php">SendKey</a></li>
+			<li class="active"><a href="https://cse3501project.herokuapp.com/admin/admin.php">Home</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/admin/upload.php">Upload Article</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/admin/viewfile.php">View File</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/admin/leakfile.php">Leak User</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/admin/sendkey.php">SendKey</a></li>
 			
 			
 		</ul></nav>
@@ -59,16 +59,16 @@ header( 'Content-Type: text/html; charset=utf-8' );
 					<content>
 						<p>
 							<table align="center" cellpadding="9" cellspacing="2" width="10"><tr bgcolor="green">
-							<td >Article Subject</td><td>Article Key</td><td>File Name</td><td>Upload Date</td><td><a href="m_article.php">Delete</a></td></tr>
+							<td >Article Subject</td><td>Article Key</td><td>File Name</td><td>Upload Date</td><td><a href="https://cse3501project.herokuapp.com/admin/m_article.php">Delete</a></td></tr>
 					<?php
                             {
                                 $row="";
-                                $con = mysqli_connect("localhost","root","");
+                                $con = mysqli_connect("sql5.freemysqlhosting.net","sql5451502","6NrWzphBie");
                                 if (!$con)
                                     echo('Could not connect: ' . mysqli_error());
                                 else
                                 {
-                                    mysqli_select_db( $con,"dataleakage");
+                                    mysqli_select_db( $con,"sql5451502");
                                     $sql = 'SELECT * FROM presentation';
                                     $retval = mysqli_query(  $con,$sql );
                                     if(! $retval )
@@ -82,7 +82,7 @@ header( 'Content-Type: text/html; charset=utf-8' );
 												"<td> {$row['fname']} </td> " .
 												"<td> {$row['time']} </td> " .
 												
-												"<td><a href='m_article.php?id=". "{$row['subject']}'>{$row['subject']}</a>" .
+												"<td><a href='https://cse3501project.herokuapp.com/admin/m_article.php?id=". "{$row['subject']}'>{$row['subject']}</a>" .
 											    "</td>" ;
                                     } 
                                 }
@@ -107,7 +107,7 @@ header( 'Content-Type: text/html; charset=utf-8' );
 <aside class="top-sidebar">
 					<article>
 					<h2>Welcome: <?php echo $_SESSION['name']/*Echo the username */ ?></h2>
-					<li><a href="logout.php">Logout</a></li>
+					<li><a href="https://cse3501project.herokuapp.com/admin/logout.php">Logout</a></li>
 					
 					<p></p>
 				    </article>
