@@ -2,7 +2,7 @@
 // Start a session for error reporting
 session_start();
 // Call our connection file
-require("https://cse3501project.herokuapp.com/includes/conn.php");
+require("includes/conn.php");
 
 
 
