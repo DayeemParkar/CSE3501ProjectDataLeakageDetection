@@ -4,7 +4,7 @@ $password = $_POST['password']; //Set Password
 $msg ='';
 if(isset($username, $password)) {
     ob_start();
-    include('https://cse3501project.herokuapp.com/config.php'); //Initiate the MySQL connection
+    include('config.php'); //Initiate the MySQL connection
     // To protect MySQL injection (more detail about MySQL injection)
     $myusername = stripslashes($username);
     $mypassword = stripslashes($password);
@@ -21,7 +21,7 @@ if(isset($username, $password)) {
         $_SESSION['password']= "password";
         session_start();
         $_SESSION['name']= $myusername;
-        header("location:https://cse3501project.herokuapp.com/admin/admin.php");
+        header("location:admin/admin.php");
     }
     else {
         $msg = "Wrong Username or Password. Please retry";
