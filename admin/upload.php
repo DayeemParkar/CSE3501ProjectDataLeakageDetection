@@ -6,7 +6,7 @@ if (!isset($_SESSION['name'])) {
 		//$_SESSION['error'] = "Please Login First";
 		echo "<script type=\"text/javascript\">"." alert('Please Login'); " ."</script>";
 		} if (!$_SESSION['name']){
-		      echo  header("Location: http://localhost/data-leakage-detection/adminlogin.php");
+		      echo  header("Location: https://cse3501project.herokuapp.com/adminlogin.php");
 		}
 
 		
@@ -18,7 +18,7 @@ if (!isset($_SESSION['name'])) {
 //}
 //else //Continue to current page
 header( 'Content-Type: text/html; charset=utf-8' );
-include'config.php';
+include'https://cse3501project.herokuapp.com/admin/config.php';
  }
  
 ?>
@@ -28,7 +28,7 @@ include'config.php';
 	<title>Data Leakage Detection</title>
 	<meta charset="utf-8" />
 	
-	<link rel="stylesheet" href="stylesheet.css" type="text/css" />
+	<link rel="stylesheet" href="https://cse3501project.herokuapp.com/admin/stylesheet.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -37,7 +37,7 @@ include'config.php';
         <?php
 			if(!empty($_POST))
 			{
-				$con = mysqli_connect("localhost","root","");
+				$con = mysqli_connect("sql5.freemysqlhosting.net","sql5451502","6NrWzphBie");
 				if (!$con)
 					echo('Could not connect: ' . mysqli_error());
 				else
@@ -69,11 +69,11 @@ include'config.php';
 	 <header class="mainHeader">
 		<nav><ul>
 			
-			<li ><a href="admin.php">Home</a></li>
-			<li class="active"><a href="upload.php">Upload Article</a></li>
-			<li><a href="view file.php">View File</a></li>
-			<li ><a href="leakfile.php">Leak User</a></li>
-			<li ><a href="sendkey.php">SendKey</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/admin/admin.php">Home</a></li>
+			<li class="active"><a href="https://cse3501project.herokuapp.com/admin/upload.php">Upload Article</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/admin/viewfile.php">View File</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/admin/leakfile.php">Leak User</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/admin/sendkey.php">SendKey</a></li>
 
 			
 	</ul></nav>
@@ -95,7 +95,7 @@ include'config.php';
 						
 						
 						
-        <form id="form3" enctype="multipart/form-data" method="post" action="upload.php">
+        <form id="form3" enctype="multipart/form-data" method="post" action="https://cse3501project.herokuapp.com/admin/upload.php">
             <table width="552" height="200" style="border-radius: 10px; box-shadow: 0 0 2px 2px #888;
             	font-family:'Comic Sans MS';font-size: 14px;" >
 				
@@ -123,17 +123,17 @@ include'config.php';
 <aside class="top-sidebar">
 					<article>
 					<h2>Welcome: <?php echo $_SESSION['name']/*Echo the username */ ?></h2>
-					<li><a href="logout.php">Logout</a></li>
+					<li><a href="https://cse3501project.herokuapp.com/admin/logout.php">Logout</a></li>
 					
 					<p> <?php
                             {
                                 $row="";
-                                $con = mysqli_connect("localhost","root","");
+                                $con = mysqli_connect("sql5.freemysqlhosting.net","sql5451502","6NrWzphBie");
                                 if (!$con)
                                     echo('Could not connect: ' . mysqli_error());
                                 else
                                 {
-                                    mysqli_select_db( $con, "dataleakage");
+                                    mysqli_select_db( $con, "sql5451502");
                                     $sql = 'SELECT * FROM register';
                                     $retval = mysqli_query($con, $sql);
                                     if(! $retval )
