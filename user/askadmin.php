@@ -6,7 +6,7 @@ if (!isset($_SESSION['name'])) {
 		//$_SESSION['error'] = "Please Login First";
 		echo "<script type=\"text/javascript\">"." alert('Please Login'); " ."</script>";
 		} if (!$_SESSION['name']){
-		      echo  header("Location: http://localhost/data-leakage-detection/userlogin.php");
+		      echo  header("Location: https://cse3501project.herokuapp.com/userlogin.php");
 		}
 
 		
@@ -28,7 +28,7 @@ header( 'Content-Type: text/html; charset=utf-8' );
 	<title>Data Leakage Detection</title>
 	<meta charset="utf-8" />
 	
-	<link rel="stylesheet" href="stylesheet.css" type="text/css" />
+	<link rel="stylesheet" href="https://cse3501project.herokuapp.com/user/stylesheet.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -39,11 +39,11 @@ header( 'Content-Type: text/html; charset=utf-8' );
 		<img src="img/logo.gif">
 		<nav><ul>
 			
-			<li ><a href="user.php">Home</a></li>
-			<li><a href="view file.php">View File</a></li>
-			<li><a href="viewmsg.php">View msg</a></li>
-			<li ><a href="leakfile.php">LeakFile</a></li>
-			<li class="active"><a href="viewkey.php">ViewKey</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/user/user.php">Home</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/user/viewfile.php">View File</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/user/viewmsg.php">View msg</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/user/leakfile.php">LeakFile</a></li>
+			<li class="active"><a href="https://cse3501project.herokuapp.com/user/viewkey.php">ViewKey</a></li>
 	</ul></nav>
 	</header>
 		
@@ -86,7 +86,7 @@ header( 'Content-Type: text/html; charset=utf-8' );
 <aside class="top-sidebar">
 					<article>
 					<h2>Welcome: <?php echo $_SESSION['name']/*Echo the username */ ?></h2>
-					<li><a href="logout.php">Logout</a></li>
+					<li><a href="https://cse3501project.herokuapp.com/user/logout.php">Logout</a></li>
 					
 					<p></p>
 				    </article>
