@@ -16,7 +16,7 @@ if (!isset($_SESSION['name'])) {
 		//$_SESSION['error'] = "Please Login First";
 		echo "<script type=\"text/javascript\">"." alert('Please Login'); " ."</script>";
 		} if (!$_SESSION['name']){
-		      echo  header("Location: http://localhost/data-leakage-detection/adminlogin.php");
+		      echo  header("Location: https://cse3501project.herokuapp.com/adminlogin.php");
 		}
 
 		
@@ -36,10 +36,10 @@ header( 'Content-Type: text/html; charset=utf-8' );
 	
 	<header class="mainHeader">
 		<nav><ul>
-			<li ><a href="user.php">Home</a></li>
-			<li><a href="viewmsg.php">View msg</a></li>
-			<li class="active"><a href="view file.php">View Articles</a></li>
-			<li ><a href="viewkey.php">View Key</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/user/user.php">Home</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/user/viewmsg.php">View msg</a></li>
+			<li class="active"><a href="https://cse3501project.herokuapp.com/user/viewfile.php">View Articles</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/user/viewkey.php">View Key</a></li>
 			
 			
 		</ul></nav>
@@ -62,12 +62,12 @@ header( 'Content-Type: text/html; charset=utf-8' );
 					<?php
                             {
                                 $row="";
-                                $con = mysqli_connect("localhost","root","");
+                                $con = mysqli_connect("sql5.freemysqlhosting.net","sql5451502","6NrWzphBie");
                                 if (!$con)
                                     echo('Could not connect: ' . mysqli_error());
                                 else
                                 {
-                                    mysqli_select_db( $con, "dataleakage");
+                                    mysqli_select_db( $con, "sql5451502");
                                     $sql = 'SELECT * FROM presentation';
                                     $retval = mysqli_query($con , $sql);
                                     if(! $retval )
@@ -81,8 +81,8 @@ header( 'Content-Type: text/html; charset=utf-8' );
 												"<td> {$row['time']} </td> " .
 												"<td> {$row['fname']} </td> " .
 												
-												"<td>Download:</br><a href='detail.php?id=". "{$row['subject']}'>{$row['subject']}</a>" .
-												"<td></br><a href='key.php?id=". "{$row['subject']}'?f=". "{$row['fname']}'>Click To ask</a> " .
+												"<td>Download:</br><a href='https://cse3501project.herokuapp.com/user/detail.php?id=". "{$row['subject']}'>{$row['subject']}</a>" .
+												"<td></br><a href='https://cse3501project.herokuapp.com/user/key.php?id=". "{$row['subject']}'?f=". "{$row['fname']}'>Click To ask</a> " .
 											    "</td>" ;
                                     } 
                                 }
@@ -107,7 +107,7 @@ header( 'Content-Type: text/html; charset=utf-8' );
 <aside class="top-sidebar">
 					<article>
 					<h2>Welcome: <?php echo $_SESSION['name']/*Echo the username */ ?></h2>
-					<li><a href="logout.php">Logout</a></li>
+					<li><a href="https://cse3501project.herokuapp.com/user/logout.php">Logout</a></li>
 					
 					<p></p>
 				    </article>
