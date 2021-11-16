@@ -4,7 +4,7 @@
 	<title>Data Leakage Detection</title>
 	<meta charset="utf-8" />
 	
-	<link rel="stylesheet" href="stylesheet.css" type="text/css" />
+	<link rel="stylesheet" href="https://cse3501project.herokuapp.com/stylesheet.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -13,10 +13,10 @@
 	
 	<header class="mainHeader">
 		<nav><ul>
-			<li ><a href="index.php">Home</a></li>
-			<li><a href="register.html">Registration</a></li>
-			<li class="active"><a href="userlogin.php">UserLogin</a></li>
-			<li ><a href="adminlogin.php">AdminLogin</a></li>			
+			<li ><a href="https://cse3501project.herokuapp.com">Home</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/register.html">Registration</a></li>
+			<li class="active"><a href="https://cse3501project.herokuapp.com/userlogin.php">UserLogin</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/adminlogin.php">AdminLogin</a></li>			
 	</ul></nav>
 	</header>
 		
@@ -29,7 +29,7 @@
 					
 					<content>
 						<p>		  
-          <form name="s" action="check_login_user.php" method="POST" onsubmit="return valid()">
+          <form name="s" action="https://cse3501project.herokuapp.com/check_login_user.php" method="POST" onsubmit="return valid()">
             <table align="center" cellpadding="" cellspacing="" width="">
               <tr> 
                 <td colspan="2" align="center"><font size="2"><b>
