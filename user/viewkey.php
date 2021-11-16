@@ -38,11 +38,10 @@ header( 'Content-Type: text/html; charset=utf-8' );
 	<header class="mainHeader">
 		<nav><ul>
 			
-			<li ><a href="user.php">Home</a></li>
-			<li><a href="viewmsg.php">View msg</a></li>
-			
-			<li><a href="view file.php">View Article</a></li>
-			<li class="active"><a href="viewkey.php">View key</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/user/user.php">Home</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/user/viewmsg.php">View msg</a></li>
+			<li><a href="https://cse3501project.herokuapp.com/user/viewfile.php">View Article</a></li>
+			<li class="active"><a href="https://cse3501project.herokuapp.com/user/viewkey.php">View key</a></li>
 			
 	</ul></nav>
 	</header>
@@ -58,12 +57,12 @@ header( 'Content-Type: text/html; charset=utf-8' );
 		
 					<?PHP
 				
-				$con = mysqli_connect("localhost","root","");
+				$con = mysqli_connect("sql5.freemysqlhosting.net","sql5451502","6NrWzphBie");
                                 if (!$con)
                                     echo('Could not connect: ' . mysqli_error());
                                 else
                                 {
-                                    mysqli_select_db( $con,"dataleakage");
+                                    mysqli_select_db( $con,"sql5451502");
 									
 
 
@@ -106,7 +105,7 @@ while($w1=mysqli_fetch_array($result))
 <aside class="top-sidebar">
 					<article>
 					<h2>Welcome: <?php echo $_SESSION['name']/*Echo the username */ ?></h2>
-					<li><a href="logout.php">Logout</a></li>
+					<li><a href="https://cse3501project.herokuapp.com/user/logout.php">Logout</a></li>
 					
 					<p></p>
 				    </article>
