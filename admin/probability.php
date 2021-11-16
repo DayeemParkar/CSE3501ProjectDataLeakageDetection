@@ -1,12 +1,12 @@
 <?php 
 session_start();
 
-$con = mysqli_connect("localhost","root","");
+$con = mysqli_connect("sql5.freemysqlhosting.net","sql5451502","6NrWzpgBie");
 
 if (!$con)
     echo('Could not connect: ' . mysqli_error());
 else {
-    mysqli_select_db($con,"dataleakage" );
+    mysqli_select_db($con,"sql5451502" );
 
     $qry1="SELECT * from register";
     $result1=mysqli_query($con, $qry1);
@@ -70,6 +70,6 @@ else {
         $result6 = mysqli_query($con,$sql6) or die ("Could not send data into DB: " . mysqli_error($con));
     }
   
-    header("Location: leakfile.php");
+    header("Location: https://cse3501project.herokuapp.com/admin/leakfile.php");
 }
 ?>
