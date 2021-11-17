@@ -28,6 +28,7 @@ else {
     foreach($Set as $S){
         $agents=[];
         $data=[][];
+        $i = 0;
 
         $qry="SELECT * from record";
         $result=mysqli_query($con, $qry);
@@ -39,19 +40,20 @@ else {
                 $sub=$w1["subject"];
                 $sql=mysqli_query($con,"SELECT * from presentation WHERE subject = '$sub'");
                 $w=mysqli_fetch_array($sql);
-                $key=[$w["fname"]];
-                array_push($data, $key);
+                $key = array($w["fname"]);
+                $data[i++] = $key;
             }
             else {
                 $agenIndex = array_search($currentAgent,$agents);
-                array_push($data[$agenIndex], $w["fname"]);
+                $len = count($data[$agenIndex]);
+                $data[$agenIndex][$len] = $w["fname"];
             }
         }
         $num=0;
         //set data as null if obj not present
         for($i =0;$i<count($agents);$i++){
             if(!in_array($S,$data[$i])){
-              $data[$i]=[];
+              unset($data[$i]);
               $num++; 
             }
         }
@@ -59,12 +61,12 @@ else {
             //calc product
             for($i =0;$i<count($agents);$i++) {
                 if(!empty($data[$i])){
-                    $product[$i]*=1-(1-$p)/$num;
+                    $product[$i]=$product[$i]*(1-(1-$p)/$num);
                 }
             }
         }
-        print_r($product);
-        echo "<br/>";
+        //print_r($product);
+        //echo "<br/>";
 
     }
 
