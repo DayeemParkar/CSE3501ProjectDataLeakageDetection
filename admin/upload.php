@@ -18,7 +18,7 @@ if (!isset($_SESSION['name'])) {
 //}
 //else //Continue to current page
 header( 'Content-Type: text/html; charset=utf-8' );
-include'https://cse3501project.herokuapp.com/admin/config.php';
+include'admin/config.php';
  }
  
 ?>
@@ -42,15 +42,15 @@ include'https://cse3501project.herokuapp.com/admin/config.php';
 					echo('Could not connect: ' . mysqli_error());
 				else
 				{					
-					if (file_exists("https://cse3501project.herokuapp.com/admin/download/" . $_FILES["file"]["name"]))
+					if ("admin/download/" . $_FILES["file"]["name"]))
 					{
 						echo '<script language="javascript">alert(" Sorry!! Filename Already Exists...")</script>';
 					}
 					else
 					{
 						move_uploaded_file($_FILES["file"]["tmp_name"],
-						"https://cse3501project.herokuapp.com/admin/download/" . $_FILES["file"]["name"]) ;
-						mysqli_select_db($con, "dataleakage");
+						"admin/download/" . $_FILES["file"]["name"]) ;
+						mysqli_select_db($con, "sql5451502");
 						$sql = "INSERT INTO presentation(subject,topic,fname,time) VALUES ('" . $_POST["sub"] ."','" . $_POST["pre"] . "','" . 
 							  $_FILES["file"]["name"] ."','".date("d/m/Y")."');";
 						if (!mysqli_query($con,$sql))
@@ -95,7 +95,7 @@ include'https://cse3501project.herokuapp.com/admin/config.php';
 						
 						
 						
-        <form id="form3" enctype="multipart/form-data" method="post" action="https://cse3501project.herokuapp.com/admin/upload.php">
+        <form id="form3" enctype="multipart/form-data" method="post" action="admin/upload.php">
             <table width="552" height="200" style="border-radius: 10px; box-shadow: 0 0 2px 2px #888;
             	font-family:'Comic Sans MS';font-size: 14px;" >
 				
