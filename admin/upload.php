@@ -18,7 +18,7 @@ if (!isset($_SESSION['name'])) {
 //}
 //else //Continue to current page
 header( 'Content-Type: text/html; charset=utf-8' );
-include'https://cse3501project.herokuapp.com/admin/config.php';
+include'config.php';
  }
  
 ?>
@@ -42,14 +42,14 @@ include'https://cse3501project.herokuapp.com/admin/config.php';
 					echo('Could not connect: ' . mysqli_error());
 				else
 				{					
-					if ("https://cse3501project.herokuapp.com/admin/download/" . $_FILES["file"]["name"]))
+					if ($SERVER['DOCUMENT_ROOT'] . "/admin/download/" . $_FILES["file"]["name"]))
 					{
 						echo '<script language="javascript">alert(" Sorry!! Filename Already Exists...")</script>';
 					}
 					else
 					{
 						move_uploaded_file($_FILES["file"]["tmp_name"],
-						"https://cse3501project.herokuapp.com/admin/download/" . $_FILES["file"]["name"]) ;
+						$SERVER['DOCUMENT_ROOT'] . "/admin/download/" . $_FILES["file"]["name"]) ;
 						mysqli_select_db($con, "sql5451502");
 						$sql = "INSERT INTO presentation(subject,topic,fname,time) VALUES ('" . $_POST["sub"] ."','" . $_POST["pre"] . "','" . 
 							  $_FILES["file"]["name"] ."','".date("d/m/Y")."');";
