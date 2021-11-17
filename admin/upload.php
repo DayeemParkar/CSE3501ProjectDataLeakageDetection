@@ -52,7 +52,7 @@ include'config.php';
 						"download/" . $_FILES["file"]["name"]) ;
 						mysqli_select_db($con, "sql5451502");
 						$sql = "INSERT INTO presentation(subject,topic,fname,time) VALUES ('" . $_POST["sub"] ."','" . $_POST["pre"] . "','" . 
-							  $_FILES["file"]["name"] ."','".date("d/m/Y")."');";
+							  $_FILES["file"]["name"] ."','".date("Y/m/d")."');";
 						if (!mysqli_query($con,$sql))
 							echo('Error : ' . mysql_error());
 						else
