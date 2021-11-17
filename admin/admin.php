@@ -56,10 +56,10 @@ header( 'Content-Type: text/html; charset=utf-8' );
 						<p>
 							<table align="center" cellpadding="10" cellspacing="2" width="10">
 								<tr>
-									<td ><img src="https://cse3501project.herokuapp.com/admin/img/1.png" height='60px' width='60px'></td>
-									<td><img src="https://cse3501project.herokuapp.com/admin/img/msg.jpg"  height='60px' width='60px'></td>
+									<td ><img src="https://cse3501project.herokuapp.com/admin/img/1.PNG" height='60px' width='60px'></td>
+									<td><img src="https://cse3501project.herokuapp.com/admin/img/msg.JPG"  height='60px' width='60px'></td>
 									<td><img src="https://cse3501project.herokuapp.com/admin/img/upload.png"  height='60px' width='60px'></td>
-									<td><img src="https://cse3501project.herokuapp.com/admin/img/user.jpg"  height='60px' width='60px'></td></tr>
+									<td><img src="https://cse3501project.herokuapp.com/admin/img/user.JPG"  height='60px' width='60px'></td></tr>
 								<tr>
 									<td><a href="https://cse3501project.herokuapp.com/admin/m_arti.php">Manage Articles</a></td>
 									<td><a href="https://cse3501project.herokuapp.com/admin/sendmsg.php">Send Message</a></td>
