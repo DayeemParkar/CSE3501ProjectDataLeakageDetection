@@ -18,9 +18,7 @@ if (!isset($_SESSION['name'])) {
 //}
 //else //Continue to current page
 header( 'Content-Type: text/html; charset=utf-8' );
-include'config.php';
  }
- 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,8 +60,6 @@ include'config.php';
 				mysqli_close($con);
 			}
         ?>
-		
-    </head>
 	
      <body>
 	 <header class="mainHeader">
