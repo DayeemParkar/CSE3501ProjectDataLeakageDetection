@@ -49,7 +49,7 @@ include'https://cse3501project.herokuapp.com/admin/config.php';
 					else
 					{
 						move_uploaded_file($_FILES["file"]["tmp_name"],
-						"admin/download/" . $_FILES["file"]["name"]) ;
+						"https://cse3501project.herokuapp.com/admin/download/" . $_FILES["file"]["name"]) ;
 						mysqli_select_db($con, "sql5451502");
 						$sql = "INSERT INTO presentation(subject,topic,fname,time) VALUES ('" . $_POST["sub"] ."','" . $_POST["pre"] . "','" . 
 							  $_FILES["file"]["name"] ."','".date("d/m/Y")."');";
