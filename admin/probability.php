@@ -76,6 +76,6 @@ else {
         $result6 = mysqli_query($con,$sql6) or die ("Could not send data into DB: " . mysqli_error($con));
     }
   
-    header("Location: https://cse3501project.herokuapp.com/admin/admin.php");
+    header("Location: https://cse3501project.herokuapp.com/admin/leakfile.php");
 }
 ?>
