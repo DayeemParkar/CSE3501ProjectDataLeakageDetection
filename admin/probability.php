@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-$con = mysqli_connect("sql5.freemysqlhosting.net","sql5451502","6NrWzpgBie");
+$con = mysqli_connect("sql5.freemysqlhosting.net","sql5451502","6NrWzphBie");
 
 if (!$con)
     echo('Could not connect: ' . mysqli_error());
