@@ -55,15 +55,6 @@ header( 'Content-Type: text/html; charset=utf-8' );
 					<footer>
 					</footer>
 					
-					<content>
-						<p>
-	
-	<h1>UserMenu</h1>
-	
-	
-						</p>
-						</content>
-					
 				</article>
 
 			</div>
