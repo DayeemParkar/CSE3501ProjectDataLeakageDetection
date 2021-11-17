@@ -58,7 +58,7 @@ header( 'Content-Type: text/html; charset=utf-8' );
 					
 					<content>
 						<p>
-							<form action="https://cse3501project.herokuapp.com/admin/resetprobability.php">
+							<form action="resetprobability.php">
     							<input type="submit" value="Reset Probability"/>
 							</form>
 
