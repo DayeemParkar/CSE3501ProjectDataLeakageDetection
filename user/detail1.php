@@ -18,7 +18,7 @@ if($k1==$k2){
 	
 echo'enter success      
 
-'.$file = './download/'.$_GET['id'];
+'.$file = 'admin/download/'.$_GET['id'];
    	$title=$_GET['id'];
 
     header("Pragma: public");
@@ -55,7 +55,7 @@ echo'enter success
 	
 
 
-$sql = "insert into leaker ( name,time) values ('$_SESSION[name]','".date("d/m/Y")."')";
+$sql = "insert into leaker ( name,time) values ('$_SESSION[name]','".date("Y/m/d")."')";
 	$result = mysqli_query($con,$sql) or die ("Could not insert data into DB: " . mysqli_error());
 	header("Location: https://cse3501project.herokuapp.com/user/askadmin.php");
 	
