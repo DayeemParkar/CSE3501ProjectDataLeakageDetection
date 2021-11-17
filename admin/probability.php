@@ -40,7 +40,7 @@ else {
                 $sub=$w1["subject"];
                 $sql=mysqli_query($con,"SELECT * from presentation WHERE subject = '$sub'");
                 $w=mysqli_fetch_array($sql);
-                $key=$w["objNames"];
+                $key=$w["Topic"];
                 array_push($data, $key);
             }
         }
