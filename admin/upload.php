@@ -42,7 +42,7 @@ include'https://cse3501project.herokuapp.com/admin/config.php';
 					echo('Could not connect: ' . mysqli_error());
 				else
 				{					
-					if ("admin/download/" . $_FILES["file"]["name"]))
+					if ("https://cse3501project.herokuapp.com/admin/download/" . $_FILES["file"]["name"]))
 					{
 						echo '<script language="javascript">alert(" Sorry!! Filename Already Exists...")</script>';
 					}
@@ -95,7 +95,7 @@ include'https://cse3501project.herokuapp.com/admin/config.php';
 						
 						
 						
-        <form id="form3" enctype="multipart/form-data" method="post" action="admin/upload.php">
+        <form id="form3" enctype="multipart/form-data" method="post" action="https://cse3501project.herokuapp.com/admin/upload.php">
             <table width="552" height="200" style="border-radius: 10px; box-shadow: 0 0 2px 2px #888;
             	font-family:'Comic Sans MS';font-size: 14px;" >
 				
