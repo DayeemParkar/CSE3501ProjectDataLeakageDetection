@@ -58,11 +58,11 @@ header( 'Content-Type: text/html; charset=utf-8' );
 					
 					<content>
 						<p>
-							<form action="resetprobability.php">
+							<form action="./resetprobability.php">
     							<input type="submit" value="Reset Probability"/>
 							</form>
 
-							<form name="leaker" align="center" action="probability.php" method="POST">
+							<form name="leaker" align="center" action="./probability.php" method="POST">
 							<table align="center" cellpadding="9" cellspacing="2" width="10">
 								<tr bgcolor="green">
 									<td >id</td>
