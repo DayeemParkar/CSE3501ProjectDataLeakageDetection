@@ -18,7 +18,9 @@ if (!isset($_SESSION['name'])) {
 //}
 //else //Continue to current page
 header( 'Content-Type: text/html; charset=utf-8' );
+include'config.php';
  }
+ 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +28,7 @@ header( 'Content-Type: text/html; charset=utf-8' );
 	<title>Data Leakage Detection</title>
 	<meta charset="utf-8" />
 	
-	<link rel="stylesheet" href="https://cse3501project.herokuapp.com/admin/stylesheet.css" type="text/css" />
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -40,14 +42,14 @@ header( 'Content-Type: text/html; charset=utf-8' );
 					echo('Could not connect: ' . mysqli_error());
 				else
 				{					
-					if ($SERVER['DOCUMENT_ROOT'] . "/admin/download/" . $_FILES["file"]["name"]))
+					if (file_exists("download/" . $_FILES["file"]["name"]))
 					{
 						echo '<script language="javascript">alert(" Sorry!! Filename Already Exists...")</script>';
 					}
 					else
 					{
 						move_uploaded_file($_FILES["file"]["tmp_name"],
-						$SERVER['DOCUMENT_ROOT'] . "/admin/download/" . $_FILES["file"]["name"]) ;
+						"download/" . $_FILES["file"]["name"]) ;
 						mysqli_select_db($con, "sql5451502");
 						$sql = "INSERT INTO presentation(subject,topic,fname,time) VALUES ('" . $_POST["sub"] ."','" . $_POST["pre"] . "','" . 
 							  $_FILES["file"]["name"] ."','".date("d/m/Y")."');";
@@ -60,6 +62,8 @@ header( 'Content-Type: text/html; charset=utf-8' );
 				mysqli_close($con);
 			}
         ?>
+		
+    </head>
 	
      <body>
 	 <header class="mainHeader">
@@ -119,7 +123,7 @@ header( 'Content-Type: text/html; charset=utf-8' );
 <aside class="top-sidebar">
 					<article>
 					<h2>Welcome: <?php echo $_SESSION['name']/*Echo the username */ ?></h2>
-					<li><a href="https://cse3501project.herokuapp.com/admin/logout.php">Logout</a></li>
+					<li><a href="logout.php">Logout</a></li>
 					
 					<p> <?php
                             {
