@@ -18,7 +18,7 @@ if($k1==$k2){
 	
 echo'enter success      
 
-'.$file = 'admin/download/'.$_GET['id'];
+'.$file = 'https://cse3501project.herokuapp.com/admin/download/'.$_GET['id'];
    	$title=$_GET['id'];
 
     header("Pragma: public");
