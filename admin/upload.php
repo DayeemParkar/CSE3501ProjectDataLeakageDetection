@@ -18,7 +18,7 @@ if (!isset($_SESSION['name'])) {
 //}
 //else //Continue to current page
 header( 'Content-Type: text/html; charset=utf-8' );
-include'admin/config.php';
+include'https://cse3501project.herokuapp.com/admin/config.php';
  }
  
 ?>
