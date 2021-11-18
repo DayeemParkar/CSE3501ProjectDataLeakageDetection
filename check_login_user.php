@@ -13,7 +13,7 @@ if(isset($username, $password)) {
     $sql="SELECT * FROM register WHERE userid ='$myusername' and password ='$mypassword'";
     $result=mysqli_query($dbC, $sql);
     // If result matched $myusername and $mypassword
-    if($row = mysql_fetch_row($result)){
+    if(mysqli_num_rows($result) != 0){
         // Register $myusername, $mypassword and redirect to file "user.php"
         $_SESSION['admin']= "admin";
         $_SESSION['password']= "password";
