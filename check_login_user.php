@@ -1,6 +1,6 @@
 <?php
-$username = $_POST['username']; //Set UserName
-$password = $_POST['password']; //Set Password
+$username = $_POST["username"]; //Set UserName
+$password = $_POST["password"]; //Set Password
 $msg ='';
 if(isset($username, $password)) {
     ob_start();
