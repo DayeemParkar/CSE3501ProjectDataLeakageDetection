@@ -39,7 +39,7 @@ header( 'Content-Type: text/html; charset=utf-8' );
 			<li ><a href="https://cse3501project.herokuapp.com/admin/admin.php">Home</a></li>
 			<li><a href="https://cse3501project.herokuapp.com/admin/upload.php">Upload Article</a></li>
 			<li><a href="https://cse3501project.herokuapp.com/admin/viewfile.php">View File</a></li>
-			<li ><a href="https://cse3501project.herokuapp.com/admin/leakfile.php">LeakFile</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com/admin/leakfile.php">Leak User</a></li>
 			<li class="active"><a href="https://cse3501project.herokuapp.com/admin/sendkey.php">SendKey</a></li>
 			
 			
@@ -164,7 +164,7 @@ while($w1=mysqli_fetch_array($result))
                   </b></font></td>
               </tr>
                 <tr> 
-                <td><strong>Send2:</strong></td>
+                <td><strong>Send To:</strong></td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="a1" id="a1" class="b"></td>
               </tr>
 			   <tr> 
