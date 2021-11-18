@@ -1,3 +1,5 @@
+<html>
+<body>
 <?php
 // Start a session for error reporting
 session_start();
@@ -31,3 +33,5 @@ header("Location:https://cse3501project.herokuapp.com/register.php");
 	exit;*/
 
 ?>
+</body>
+</html>
