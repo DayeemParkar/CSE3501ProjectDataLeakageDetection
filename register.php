@@ -14,7 +14,14 @@ $uid = $_POST['uid'];
 $pass = $_POST['pass'];
 $email=$_POST['email'];
 
-echo "Test";
+$sql = "SELECT subject, Topic, fname FROM presentation";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "<br>". $row["subject"]. " ". $row["Topic"]. " " . $row["fname"];
+    }
+}
 /*$sql = 'SELECT * FROM presentation';
 $retval = mysqli_query($con,$sql) or die (mysqli_error($conn));
 if(!$retval){
