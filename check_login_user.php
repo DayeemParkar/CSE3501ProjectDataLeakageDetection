@@ -10,13 +10,11 @@ if(isset($username, $password)) {
     $mypassword = stripslashes($password);
     $myusername = mysqli_real_escape_string($dbC, $myusername);
     $mypassword = mysqli_real_escape_string($dbC, $mypassword);
-    $sql="SELECT * FROM register WHERE userid ='$myusername' and password =('$mypassword')";
+    $sql="SELECT * FROM register WHERE userid ='$myusername' and password ='$mypassword'";
     $result=mysqli_query($dbC, $sql);
-    // Mysql_num_row is counting table row
-    $count=mysqli_num_rows($result);
-    // If result matched $myusername and $mypassword, table row must be 1 row
-    if($count==1){
-        // Register $myusername, $mypassword and redirect to file "admin.php"
+    // If result matched $myusername and $mypassword
+    if($row = mysql_fetch_row($result)){
+        // Register $myusername, $mypassword and redirect to file "user.php"
         $_SESSION['admin']= "admin";
         $_SESSION['password']= "password";
         session_start();
