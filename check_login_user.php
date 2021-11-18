@@ -23,8 +23,7 @@ if(isset($username, $password)) {
     }
     else {
         $msg = "Wrong Username or Password. Please retry";
-        $alert = "<script>alert(" . $mypassword . ")</script>";
-        echo $alert;
+        echo '<script type="text/javascript">alert("' . $mypassword . '")</script>';
         header("location:https://cse3501project.herokuapp.com?msg=$msg");
     }
     ob_end_flush();
