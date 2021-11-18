@@ -14,7 +14,8 @@ $uid = $_POST['uid'];
 $pass = $_POST['pass'];
 $email=$_POST['email'];
 
-$sql = 'SELECT * FROM presentation';
+echo "Test";
+/*$sql = 'SELECT * FROM presentation';
 $retval = mysqli_query($con,$sql) or die (mysqli_error($conn));
 if(!$retval){
 die(mysqli_error($conn));
@@ -23,7 +24,7 @@ else{
 while($row = mysqli_fetch_assoc($retval)){
 echo "<br>".$row['subject']." ".$row['Topic']." ".$row['fname'];
 }
-}
+}*/
 	/*$sql = "insert into register ( username, userid, password, emailid) values ('$uname', '$uid','$pass', '$email')";
 	$result = mysqli_query($conn, $sql) or die ("Could not insert data into DB: " . mysqli_error($conn));
 	$sql = "insert into leaker ( id, name, probability) values ('$uid', '$uname', 0.0)";
