@@ -8,8 +8,6 @@ if(isset($username, $password)) {
     // To protect MySQL injection (more detail about MySQL injection)
     $myusername = stripslashes($username);
     $mypassword = stripslashes($password);
-    $myusername = mysqli_real_escape_string($dbC, $myusername);
-    $mypassword = mysqli_real_escape_string($dbC, $mypassword);
     $sql="SELECT * FROM register WHERE userid ='$myusername' and password ='$mypassword'";
     $result=mysqli_query($dbC, $sql);
     // If result matched $myusername and $mypassword
@@ -23,7 +21,6 @@ if(isset($username, $password)) {
     }
     else {
         $msg = "Wrong Username or Password. Please retry";
-        echo '<script type="text/javascript">alert("' . $mypassword . '")</script>';
         header("location:https://cse3501project.herokuapp.com?msg=$msg");
     }
     ob_end_flush();
