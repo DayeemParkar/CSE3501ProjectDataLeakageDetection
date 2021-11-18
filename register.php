@@ -24,7 +24,6 @@ while($row = mysqli_fetch_assoc($retval)){
 echo "<br>".$row['subject']." ".$row['Topic']." ".$row['fname'];
 }
 }
-header("Location:https://cse3501project.herokuapp.com/register.php");
 	/*$sql = "insert into register ( username, userid, password, emailid) values ('$uname', '$uid','$pass', '$email')";
 	$result = mysqli_query($conn, $sql) or die ("Could not insert data into DB: " . mysqli_error($conn));
 	$sql = "insert into leaker ( id, name, probability) values ('$uid', '$uname', 0.0)";
