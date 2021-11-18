@@ -14,21 +14,12 @@ $uid = $_POST['uid'];
 $pass = $_POST['pass'];
 $email=$_POST['email'];
 
-$sql = "SELECT subject, Topic, fname FROM presentation";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        echo "<br>". $row["subject"]. " ". $row["Topic"]. " " . $row["fname"];
-    }
-}
-exit;
-	/*$sql = "insert into register ( username, userid, password, emailid) values ('$uname', '$uid','$pass', '$email')";
+	$sql = "insert into register ( username, userid, password, emailid) values ('$uname', '$uid','$pass', '$email')";
 	$result = mysqli_query($conn, $sql) or die ("Could not insert data into DB: " . mysqli_error($conn));
 	$sql = "insert into leaker ( id, name, probability) values ('$uid', '$uname', 0.0)";
-	$result = mysqli_query($conn, $sql) or die ("Could not insert data into DB: " . mysqli_error($conn));*/
+	$result = mysqli_query($conn, $sql) or die ("Could not insert data into DB: " . mysqli_error($conn));
 	header("Location:https://cse3501project.herokuapp.com/userlogin.php");
-	//exit;
+	exit;
 
 ?>
 </body>
