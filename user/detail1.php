@@ -7,8 +7,8 @@ if (!$con)
     echo('Could not connect: ' . mysqli_error());
 else {
     mysqli_select_db($con,"sql5451502" );
-    $k1=$_POST['s1'];
-    $k2=$_POST['s2'];
+    $k1=$_POST["s1"];
+    $k2=$_POST["s2"];
 
 //$qry="SELECT * FROM presentation WHERE Topic = '$k1' ";
 //$result=mysql_query($qry)or die ("Could not insert data into DB: " . mysql_error());;
