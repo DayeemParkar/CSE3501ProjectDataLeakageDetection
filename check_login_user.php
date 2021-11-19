@@ -1,3 +1,5 @@
+<html>
+<body>
 <?php
 $username = $_POST["username"]; //Set UserName
 $password = $_POST["password"]; //Set Password
@@ -29,3 +31,5 @@ else {
     header("location:https://cse3501project.herokuapp.com?msg=Please enter some username and password");
 }
 ?>
+</body>
+</html>
