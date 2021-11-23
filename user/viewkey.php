@@ -57,12 +57,12 @@ header( 'Content-Type: text/html; charset=utf-8' );
 		
 					<?PHP
 				
-				$con = mysqli_connect("sql5.freemysqlhosting.net","sql5451502","6NrWzphBie");
+				$con = mysqli_connect("sql6.freemysqlhosting.net","sql6453269","13gSHbLs1b");
                                 if (!$con)
                                     echo('Could not connect: ' . mysqli_error());
                                 else
                                 {
-                                    mysqli_select_db( $con,"sql5451502");
+                                    mysqli_select_db( $con,"sql6453269");
 									
 
 
