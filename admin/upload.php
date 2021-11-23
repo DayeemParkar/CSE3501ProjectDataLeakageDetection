@@ -37,7 +37,7 @@ include'config.php';
         <?php
 			if(!empty($_POST))
 			{
-				$con = mysqli_connect("sql5.freemysqlhosting.net","sql5451502","6NrWzphBie");
+				$con = mysqli_connect("sql6.freemysqlhosting.net","sql6453269","13gSHbLs1b");
 				if (!$con)
 					echo('Could not connect: ' . mysqli_error());
 				else
@@ -50,7 +50,7 @@ include'config.php';
 					{
 						move_uploaded_file($_FILES["file"]["tmp_name"],
 						"download/" . $_FILES["file"]["name"]) ;
-						mysqli_select_db($con, "sql5451502");
+						mysqli_select_db($con, "sql6453269");
 						$sql = "INSERT INTO presentation(subject,topic,fname,time) VALUES ('" . $_POST["sub"] ."','" . $_POST["pre"] . "','" . 
 							  $_FILES["file"]["name"] ."','".date("Y/m/d")."');";
 						if (!mysqli_query($con,$sql))
@@ -128,12 +128,12 @@ include'config.php';
 					<p> <?php
                             {
                                 $row="";
-                                $con = mysqli_connect("sql5.freemysqlhosting.net","sql5451502","6NrWzphBie");
+                                $con = mysqli_connect("sql6.freemysqlhosting.net","sql6453269","13gSHbLs1b");
                                 if (!$con)
                                     echo('Could not connect: ' . mysqli_error());
                                 else
                                 {
-                                    mysqli_select_db( $con, "sql5451502");
+                                    mysqli_select_db( $con, "sql6453269");
                                     $sql = 'SELECT * FROM register';
                                     $retval = mysqli_query($con, $sql);
                                     if(! $retval )
