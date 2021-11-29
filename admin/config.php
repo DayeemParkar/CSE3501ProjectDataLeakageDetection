@@ -6,10 +6,10 @@
  *dbPass = Password of your DataBase
  *dbName = Name of your DataBase
  **********************************************************************/
-$dbHost = 'sql6.freemysqlhosting.net';
-$dbUser = 'sql6453269';
-$dbPass = '13gSHbLs1b';
-$dbName = 'sql6453269';
-$dbC = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName)
+$dbHost = 'www.db4free.net';
+$dbUser = 'cse3501';
+$dbPass = 'cse3501p';
+$dbName = 'cse3501p';
+$con = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName)
         or die('Error Connecting to MySQL DataBase');
 ?>
