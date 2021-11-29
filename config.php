@@ -1,8 +1,8 @@
 <?php
-$dbHost = 'sql6.freemysqlhosting.net';
-$dbUser = 'sql6453269';
-$dbPass = '13gSHbLs1b';
-$dbName = 'sql6453269';
+$dbHost = 'www.db4free.net';
+$dbUser = 'cse3501';
+$dbPass = 'cse3501p';
+$dbName = 'cse3501p';
 $dbC = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName)
         or die('Error Connecting to MySQL DataBase');
 ?>
