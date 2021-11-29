@@ -62,13 +62,14 @@ header( 'Content-Type: text/html; charset=utf-8' );
 							<td >User Name</td><td>UserID</td><td>Password</td><td>EmailID</td><td><a href="https://cse3501project.herokuapp.com/admin/a_detail.php">Delete</a></td></tr>
 					<?php
                             {
-                                $row="";
-                                $con = mysqli_connect("sql6.freemysqlhosting.net","sql6453269","13gSHbLs1b");
+                                include 'config.php';
+				$row="";
+                                //$con = mysqli_connect("sql6.freemysqlhosting.net","sql6453269","13gSHbLs1b");
                                 if (!$con)
                                     echo('Could not connect: ' . mysqli_error());
                                 else
                                 {
-                                    mysqli_select_db($con,"sql6453269");
+                                    //mysqli_select_db($con,"sql6453269");
                                     $sql = 'SELECT * FROM register';
                                     $retval = mysqli_query( $con,$sql );
                                     if(! $retval )
