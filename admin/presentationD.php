@@ -9,13 +9,14 @@
                   <marquee behavior="scroll" direction="up" scrolldelay="150" onMouseOver="this.stop();" onMouseOut="this.start();">
                         <?php
                             {
-                                $row="";
-                                $con = mysqli_connect("sql6.freemysqlhosting.net","sql6453269","13gSHbLs1b");
+                                include 'config.php';
+				$row="";
+                                //$con = mysqli_connect("sql6.freemysqlhosting.net","sql6453269","13gSHbLs1b");
                                 if (!$con)
                                     echo('Could not connect: ' . mysqli_error());
                                 else
                                 {
-                                    mysqli_select_db($con,"sql6453269");
+                                    //mysqli_select_db($con,"sql6453269");
                                     $sql = 'SELECT subject, topic, fname FROM presentation';
                                     $retval = mysqli_query(  $con,$sql );
                                     if(! $retval )
