@@ -14,7 +14,7 @@
 	
 	<header class="mainHeader">
 		<nav><ul>
-						<li ><a href="https://cse3501project.herokuapp.com">Home</a></li>
+			<li ><a href="https://cse3501project.herokuapp.com">Home</a></li>
 			<li><a href="https://cse3501project.herokuapp.com/register.html">Registration</a></li>
 			<li ><a href="https://cse3501project.herokuapp.com/userlogin.php">UserLogin</a></li>
 			<li ><a href="https://cse3501project.herokuapp.com/adminlogin.php">AdminLogin</a></li>
@@ -47,7 +47,8 @@
                         <?php
                             {
                                 $row="";
-                                $con = mysqli_connect("sql6.freemysqlhosting.net","sql6453269","13gSHbLs1b");
+				include 'config.php';
+                                //$con = mysqli_connect("sql6.freemysqlhosting.net","sql6453269","13gSHbLs1b");
                                 if (!$con)
                                     echo('Could not connect: ' . mysqli_error());
                                 else
