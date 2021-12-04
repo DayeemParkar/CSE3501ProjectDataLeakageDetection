@@ -13,6 +13,9 @@ $uname = $_POST['uname'];
 $uid = $_POST['uid'];
 $pass = $_POST['pass'];
 $email=$_POST['email'];
+	
+$uname = mysqli_real_escape_string($conn, $uname);
+$uid = mysqli_real_escape_string($conn, $uid);
 
 	$sql = "insert into register ( username, userid, password, emailid) values ('$uname', '$uid','$pass', '$email')";
 	$result = mysqli_query($conn, $sql) or die ("Could not insert data into DB: " . mysqli_error($conn));
