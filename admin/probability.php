@@ -5,79 +5,89 @@ session_start();
 
 //$con = mysqli_connect("sql6.freemysqlhosting.net","sql6453269","13gSHbLs1b");
 
-if (!$con)
-    echo('Could not connect: ' . mysqli_error());
-else {
-    //mysqli_select_db($con,"sql6453269" );
+if (!$con) echo('Could not connect: ' . mysqli_error());
+        else {
+            $Set=["T1.txt","T2.txt","T3.txt"];
+            $p=0.2;
+            
+            $agents = array();  //contains user to leak file access mapping
+            $agentNames = array();  //contains name of each user
+            $prob = array();  //contains probability of each user
+            $fileSubjects = array();  //contains subject of leaked files
+            $fileAccessCount = array();  //contains number of users that have access to each file
+            $leakFileCount = count($Set);  //number of files in leaked set
 
-    $qry1="SELECT * from register";
-    $result1=mysqli_query($con, $qry1);
-     
-    //leaked data set S
-    $Set=["T1.txt","T3.txt","T6.txt","T4.txt"];
-    $p=0.2; // most probable value of p
-
-    $qry5="SELECT * from record";
-    $result5=mysqli_query($con, $qry5);
-    
-    $product=[];
-    $finalAgents=[];
-    while($w1=mysqli_fetch_array($result5)){
-        array_push($product,1);
-        array_push($finalAgents,$w1["sendto"]);
-    }
-
-    foreach($Set as $S){
-        $agents=[];
-        $data=[][];
-        $i = 0;
-
-        $qry="SELECT * from record";
-        $result=mysqli_query($con, $qry);
-        //all agents and their data
-        while($w1=mysqli_fetch_array($result) ){
-            $currentAgent=$w1["sendto"];
-            if(!in_array($currentAgent,$agents)) {
-                array_push($agents, $currentAgent);
-                $sub=$w1["subject"];
-                $sql=mysqli_query($con,"SELECT * from presentation WHERE subject = '$sub'");
-                $w=mysqli_fetch_array($sql);
-                $key = array($w["fname"]);
-                $data[i++] = $key;
+            foreach($Set as $s) {
+                $sql = "SELECT * FROM presentation WHERE fname='$s'";
+                $result = mysqli_query($con, $sql);
+                $row = $result->fetch_assoc();
+                array_push($fileSubjects, $row['subject']);
+                array_push($fileAccessCount, 0);
             }
-            else {
-                $agenIndex = array_search($currentAgent,$agents);
-                $len = count($data[$agenIndex]);
-                $data[$agenIndex][$len] = $w["fname"];
+
+            $sql1 = "SELECT * FROM leaker";
+            $result1 = mysqli_query($con, $sql1);  //all leaker rows
+
+            $count = $result1->num_rows;  //number of users
+            $i = 0;
+            $j = 0;
+
+            for ($i=0; $i<$count; $i++){  //for each user
+                array_push($agents,array());
+                array_push($prob, 0.0);
+                $row = $result1->fetch_assoc();  //row from leaker
+                $agentNames[$i] = $row['name'];  //store name
+
+                $sql = "SELECT * FROM record WHERE sendto='$row[id]'";
+                $result = mysqli_query($con, $sql);  //returns all rows from record for that user
+                
+                $userFiles = array();
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        array_push($userFiles, $row['subject']);
+                    }
+                }
+
+                for ($j=0; $j<$leakFileCount; $j++) {  //check whether they had access to leaked files and map it
+                    if (in_array($fileSubjects[$j], $userFiles)) {
+                        array_push($agents[$i], 1);
+                        $fileAccessCount[$j] += 1;
+                    }
+                    else {
+                        array_push($agents[$i], 0);
+                    }
+                }
+                mysqli_free_result($result);
             }
-        }
-        $num=0;
-        //set data as null if obj not present
-        for($i =0;$i<count($agents);$i++){
-            if(!in_array($S,$data[$i])){
-              unset($data[$i]);
-              $num++; 
-            }
-        }
-        if($num != 0) {
-            //calc product
-            for($i =0;$i<count($agents);$i++) {
-                if(!empty($data[$i])){
-                    $product[$i]=$product[$i]*(1-(1-$p)/$num);
+
+            for ($i=0; $i<$leakFileCount; $i++) {  //for each file
+                if ($fileAccessCount[$i] > 0) {
+                    for ($j=0; $j<$count; $j++) {
+                        if ($agents[$j][$i] == 1) {
+                            if ($prob[$j] != 0.0) {
+                                $prob[$j] *= (1 - (1 - $p)/$fileAccessCount[$i]);
+                            }
+                            else {
+                                $prob[$j] = (float)(1 - (1 - $p)/$fileAccessCount[$i]);
+                            }
+                        }
+                    }
                 }
             }
+
+            for ($i=0; $i<$count; $i++) {
+                $pr = $prob[$i];
+                if ($pr != 0.0) {
+                    $pr = 1 - $pr;
+                    $sql = "UPDATE leaker SET probability='$pr' WHERE name='$agentNames[$i]' ";
+                    mysqli_query($con,$sql);
+                }
+            }
+            mysqli_free_result($result1);
         }
-        //print_r($product);
-        //echo "<br/>";
 
-    }
+header("Location: https://cse3501project.herokuapp.com/admin/leakfile.php");
 
-    for($i =0;$i<count($finalAgents);$i++){
-        $prob=1-$product[$i];
-        $sql6 = "UPDATE leaker SET probability='$prob' WHERE name='$finalAgents[$i]' ";
-        $result6 = mysqli_query($con,$sql6) or die ("Could not send data into DB: " . mysqli_error($con));
-    }
-  
-    header("Location: https://cse3501project.herokuapp.com/admin/leakfile.php");
+        ?>
 }
 ?>
