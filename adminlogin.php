@@ -38,15 +38,15 @@
               </tr>
               <tr> 
                 <td><font face="Courier New" size="+1"><strong>UserName</strong></font></td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="username" id="username" class="b"></td>
+                <td><input type="text" name="username" id="username" class="b"></td>
               </tr>
               <tr> 
                 <td><font face="Courier New" size="+1"><strong>Password</strong></font></td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="password" name="password" id="username" class="b"></td>
+                <td><input type="password" name="password" id="username" class="b"></td>
               </tr>
 	      <tr> 
                 <td><font face="Courier New" size="+1"><strong>OTP</strong></font></td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="otp" id="otp" class="b"></td>
+                <td><input type="text" name="otp" id="otp" class="b"></td>
 		<td>&nbsp;&nbsp;&nbsp;&nbsp; <button type="button" id="sotp" name="sotp" class="b">Send OTP</button></td>
               </tr>
                <tr> 
