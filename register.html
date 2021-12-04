@@ -30,6 +30,14 @@
           document.s.pass.focus();
           return false;
         }
+	      
+	var emailfilter=/^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$/i;
+        var m=emailfilter.test(document.s.email.value);
+        if(m==false) {
+          alert("Please enter a valid Email Id");
+          document.s.email.focus();
+          return false;
+        }
 
       }
     </script>
