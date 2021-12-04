@@ -13,7 +13,7 @@ if(isset($username, $password)) {
     $myusername = mysqli_real_escape_string($dbC, $myusername);
     $mypassword = mysqli_real_escape_string($dbC, $mypassword);
     
-    $sql="SELECT * FROM register WHERE userid ='$myusername' and password ='$mypassword'";
+    $sql="SELECT * FROM register WHERE userid ='$myusername' and password =('$mypassword')";
     $result=mysqli_query($con, $sql);
     // If result matched $myusername and $mypassword
     if(mysqli_num_rows($result) != 0){
