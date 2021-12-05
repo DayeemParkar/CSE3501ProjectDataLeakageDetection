@@ -37,12 +37,12 @@
                   </b></font></td>
               </tr>
               <tr> 
-                <td><font face="Courier New" size="+1"><strong>UserName</strong></font></td>
-                <td><input type="text" name="username" id="username" class="b"></td>
+                <td><font face="Courier New" size="+1"><strong>Username</strong></font></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="username" id="username" class="b"></td>
               </tr>
               <tr> 
                 <td><font face="Courier New" size="+1"><strong>Password</strong></font></td>
-                <td><input type="password" name="password" id="username" class="b"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="password" name="password" id="username" class="b"></td>
               </tr>
                <tr> 
                 <td><input type="submit" name="s" value="Submit" class="b1" > 
