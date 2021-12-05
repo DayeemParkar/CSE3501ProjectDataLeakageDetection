@@ -16,7 +16,7 @@ if (!$con)
 	echo('Could not connect: ' . mysqli_error());
 else
 {
-	if ($a1 contains '<' || $a2 contains '<' || $a3 contains '<')
+	if (str_contains($a1, '<') || str_contains($a2, '<') || str_contains($a3, '<'))
 	{
 		echo "<script>alert('Invalid message content');</script>";
 	}
