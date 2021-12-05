@@ -44,11 +44,6 @@
                 <td><font face="Courier New" size="+1"><strong>Password</strong></font></td>
                 <td><input type="password" name="password" id="username" class="b"></td>
               </tr>
-	      <tr> 
-                <td><font face="Courier New" size="+1"><strong>OTP</strong></font></td>
-                <td><input type="text" name="otp" id="otp" class="b"></td>
-		<td>&nbsp;&nbsp;&nbsp;&nbsp; <button type="button" id="sotp" name="sotp" class="b">Send OTP</button></td>
-              </tr>
                <tr> 
                 <td><input type="submit" name="s" value="Submit" class="b1" > 
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
