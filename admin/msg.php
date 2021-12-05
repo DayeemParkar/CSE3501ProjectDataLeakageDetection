@@ -1,3 +1,5 @@
+<html>
+<body>
 <?php
 // Start a session for error reporting
 include 'config.php';
@@ -29,3 +31,6 @@ else
 	}
 }
 ?>
+</body>
+</html>
+
