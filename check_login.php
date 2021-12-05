@@ -1,6 +1,9 @@
 <?php
 $username = $_POST['username']; //Set UserName
 $password = $_POST['password']; //Set Password
+
+$_SESSION['attemptTime'] = time();
+
 $msg ='';
 if(isset($username, $password)) {
     ob_start();
