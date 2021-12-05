@@ -11,7 +11,7 @@ $isValid = false;
             $isValid = true;
         }
         else {
-            $msg = "Wrong Username or Password. Please retry";
+            $msg = "Too many attempts. Try again in 30s";
             header("location:https://cse3501project.herokuapp.com?msg=$msg");
         }
     }
