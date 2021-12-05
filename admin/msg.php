@@ -9,8 +9,8 @@ $a1 = $_POST['a1'];
 $a2 = $_POST['a2'];
 $a3 = $_POST['a3'];
 
-$a2 = mysqli_real_escape_string($conn, $a2);
-$a3 = mysqli_real_escape_string($conn, $a3);
+$a2 = mysqli_real_escape_string($con, $a2);
+$a3 = mysqli_real_escape_string($con, $a3);
 
 if (!$con)
 	echo('Could not connect: ' . mysqli_error());
