@@ -10,10 +10,10 @@ if(isset($username, $password)) {
     // To protect MySQL injection (more detail about MySQL injection)
     $myusername = stripslashes($username);
     $mypassword = stripslashes($password);
-    $myusername = mysqli_real_escape_string($dbC, $myusername);
-    $mypassword = mysqli_real_escape_string($dbC, $mypassword);
+    $myusername = mysqli_real_escape_string($con, $myusername);
+    $mypassword = mysqli_real_escape_string($con, $mypassword);
     
-    $sql="SELECT * FROM register WHERE userid ='$myusername' and password ='$mypassword'";
+    $sql="SELECT * FROM register WHERE userid ='$myusername' and password =('$mypassword')";
     $result=mysqli_query($con, $sql);
     // If result matched $myusername and $mypassword
     if(mysqli_num_rows($result) != 0){
