@@ -1,9 +1,26 @@
 <?php
+session_start();
+
 $username = $_POST['username']; //Set UserName
 $password = $_POST['password']; //Set Password
 
-$_SESSION['attemptTime'] = time();
+$isValid = false;
+    if (isset($_SESSION["attemptTime"])) {
+        if (time() - $_SESSION["attemptTime"] > 10) {
+            $_SESSION["attemptTime"] = time();
+            $isValid = true;
+        }
+        else {
+            echo "<script>alert('Wait 10s to log in again');</script>";
+            header("location:https://cse3501project.herokuapp.com");
+        }
+    }
+    else {  //first access no session
+        $isValid = true;
+        $_SESSION["attemptTime"] = time();
+    }
 
+if ($isValid) {
 $msg ='';
 if(isset($username, $password)) {
     ob_start();
@@ -34,5 +51,6 @@ if(isset($username, $password)) {
 }
 else {
     header("location:https://cse3501project.herokuapp.com?msg=Please enter some username and password");
+}
 }
 ?>
