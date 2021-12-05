@@ -21,6 +21,7 @@ else
 	if (str_contains($a1, '<') || str_contains($a2, '<') || str_contains($a3, '<'))
 	{
 		echo "<script>alert('Invalid message content');</script>";
+		header("Location: https://cse3501project.herokuapp.com/admin/sendmsg.php");
 	}
 	else
 	{
