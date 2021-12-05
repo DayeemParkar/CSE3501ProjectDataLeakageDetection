@@ -6,13 +6,13 @@ $password = $_POST['password']; //Set Password
 
 $isValid = false;
     if (isset($_SESSION["attemptTime"])) {
-        if (time() - $_SESSION["attemptTime"] > 10) {
+        if (time() - $_SESSION["attemptTime"] > 30) {
             $_SESSION["attemptTime"] = time();
             $isValid = true;
         }
         else {
-            echo "<script>alert('Wait 10s to log in again');</script>";
-            header("location:https://cse3501project.herokuapp.com");
+            $msg = "Wrong Username or Password. Please retry";
+            header("location:https://cse3501project.herokuapp.com?msg=$msg");
         }
     }
     else {  //first access no session
