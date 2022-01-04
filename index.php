@@ -12,7 +12,7 @@
 	
 	<header class="mainHeader">
 		<nav><ul>
-			<li class="active"><a href="#">Home</a></li>
+			<li class="active"><a href="https://cse3501project.herokuapp.com">Home</a></li>
 			<li><a href="https://cse3501project.herokuapp.com/register1.php">Registration</a></li>
 			<li><a href="https://cse3501project.herokuapp.com/userlogin.php">UserLogin</a></li>
 			<li><a href="https://cse3501project.herokuapp.com/adminlogin.php">AdminLogin</a></li>
