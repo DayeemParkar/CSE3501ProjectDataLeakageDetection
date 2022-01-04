@@ -50,7 +50,7 @@
                                       <input type="reset" name="r" value="clear" class="b1"></td>
                                     </tr>
                                 </table>
-                                <p align="center" style="color:red">*Admin access is not accessible to users. Check  
+                                <p align="center" style="color:red">*Admin account is not accessible to users. Check  
                                     <a href="https://github.com/DayeemParkar/CSE3501ProjectDataLeakageDetection" 
                                     style="color:blue;" target="_blank">source code</a> to view screenshots</p>
                             </form>
