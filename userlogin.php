@@ -36,7 +36,7 @@
                   </b></font></td>
               </tr>
               <tr> 
-                <td><font face="Courier New" size="+1"><strong>UserName</strong></font></td>
+                <td><font face="Courier New" size="+1"><strong>UserId</strong></font></td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="username" id="username" class="b"></td>
               </tr>
               <tr> 
@@ -49,6 +49,7 @@
                   <input type="reset" name="r" value="clear" class="b1"></td>
                     </tr>  
             </table>
+	    <p align="center" style="color:red">*Credentials for testing:<br>UserId - a1<br>Password - a1P</p>
           </form>
         </div>
    		</p>
